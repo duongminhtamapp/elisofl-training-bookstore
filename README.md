@@ -1,4 +1,4 @@
-# BookStore training project
+# BookStore Training Project
 
 ## Requirements
 
