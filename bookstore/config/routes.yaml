@@ -1,0 +1,108 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+login:
+    path: /api/login
+
+register:
+    path: /api/register
+    controller: App\Controller\UserController::register
+    methods: [POST]
+
+public_book_list:
+    path: /api/public/books
+    controller: App\Controller\BookController::list
+    methods: [GET]
+
+public_order_create:
+    path: /api/public/orders
+    controller: App\Controller\OrderController::create
+    methods: [ POST ]
+
+author_list:
+    path: /api/authors
+    controller: App\Controller\AuthorController::list
+    methods: [GET]
+
+author_create:
+    path: /api/authors
+    controller: App\Controller\AuthorController::create
+    methods: [POST]
+
+author_show:
+    path: /api/authors/{id}
+    controller: App\Controller\AuthorController::show
+    methods: [GET]
+
+author_update:
+    path: /api/authors/{id}
+    controller: App\Controller\AuthorController::update
+    methods: [PUT]
+    requirements:
+        id: '\d+'
+
+author_delete:
+    path: /api/authors/{id}
+    controller: App\Controller\AuthorController::delete
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+book_list:
+    path: /api/books
+    controller: App\Controller\BookController::list
+    methods: [GET]
+
+book_create:
+    path: /api/books
+    controller: App\Controller\BookController::create
+    methods: [POST]
+
+book_show:
+    path: /api/books/{id}
+    controller: App\Controller\BookController::show
+    methods: [GET]
+
+book_update:
+    path: /api/books/{id}
+    controller: App\Controller\BookController::update
+    methods: [PUT]
+    requirements:
+        id: '\d+'
+
+book_delete:
+    path: /api/books/{id}
+    controller: App\Controller\BookController::delete
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
+
+order_list:
+    path: /api/orders
+    controller: App\Controller\OrderController::list
+    methods: [GET]
+
+order_create:
+    path: /api/orders
+    controller: App\Controller\OrderController::create
+    methods: [POST]
+
+order_show:
+    path: /api/orders/{id}
+    controller: App\Controller\OrderController::show
+    methods: [GET]
+
+order_update:
+    path: /api/orders/{id}
+    controller: App\Controller\OrderController::update
+    methods: [PUT]
+    requirements:
+        id: '\d+'
+
+order_delete:
+    path: /api/orders/{id}
+    controller: App\Controller\OrderController::delete
+    methods: [DELETE]
+    requirements:
+        id: '\d+'
